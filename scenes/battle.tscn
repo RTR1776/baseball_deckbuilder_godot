@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://..."]
+
+[ext_resource type="Script" path="res://scripts/battle.gd" id="1_abc12"]
+[ext_resource type="PackedScene" uid="uid://..." path="res://scenes/ui/runs_ui.tscn" id="2_def34"]
+[ext_resource type="PackedScene" uid="uid://..." path="res://scenes/ui/stats_ui.tscn" id="3_ghi56"]
+
+[node name="Battle" type="Node2D"]
+script = ExtResource("1_abc12")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="RunsUI" parent="UI" instance=ExtResource("2_def34")]
+// ...existing code...
+
+[node name="StatsUI" parent="UI" instance=ExtResource("3_ghi56")]
+// ...existing code...
+
+[node name="MomentumLabel" type="Label" parent="UI/StatsUI"]
+text = "Momentum: 3/3"
+// ...existing code...
+
+[node name="RunsLabel" type="Label" parent="UI/StatsUI"]
+text = "Runs: 20/20"
+// ...existing code...
